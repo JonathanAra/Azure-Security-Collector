@@ -1,8 +1,11 @@
 # Azure Security Data Collector
 
 A Python-based security data collection tool that authenticates to Azure 
-using a Service Principal, pulls security-relevant data via REST API, 
-normalizes it into a consistent structure, and outputs audit-ready JSON reports.
+using a Service Principal, pulls security-relevant data via REST API,
+normalizes it into a consistent structure, and outputs audit-ready JSON reports. 
+The normalization can be seen to standardize data that is pulled from various
+data sources, rather than looking through each data set, which can have different 
+ways outputs are displayed. 
 
 Built to demonstrate the core pattern used in enterprise security data 
 pipelines — authenticate, collect, normalize, deliver.
@@ -67,9 +70,9 @@ azure-security-collector/
 
 ### 1. Authentication
 The script authenticates to Azure using a Service Principal — 
-an application identity with scoped read-only permissions. 
+An application identity with scoped read-only permissions. 
 This follows the principle of least privilege and mirrors how 
-production data collection pipelines authenticate in regulated environments.
+Production data collection pipelines authenticate in regulated environments.
 
 ```python
 credential = ClientSecretCredential(
